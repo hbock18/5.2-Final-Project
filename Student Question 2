@@ -1,0 +1,11 @@
+SELECT 
+    Favorite_Gym,
+    COUNT(*) AS gym_count
+FROM 
+    fitness_chart
+WHERE 
+    Favorite_Gym IS NOT NULL AND Favorite_Gym != 'N/A'
+GROUP BY 
+    Favorite_Gym
+ORDER BY 
+    gym_count DESC;
