@@ -1,0 +1,5 @@
+SELECT 
+    First_name,
+    days_worked AS exercises_per_week
+FROM 
+    fitness_chart;
