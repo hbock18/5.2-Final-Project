@@ -1,0 +1,11 @@
+SELECT 
+    workout_time,
+    COUNT(*) AS workout_time_count
+FROM 
+    fitness_chart
+WHERE 
+    workout_time IS NOT NULL AND workout_time != ''
+GROUP BY 
+    workout_time
+ORDER BY 
+    workout_time_count DESC;
