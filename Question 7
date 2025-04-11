@@ -1,0 +1,11 @@
+SELECT 
+    home_meals,
+    COUNT(*) AS meal_count
+FROM 
+    fitness_chart
+WHERE 
+    home_meals IS NOT NULL AND home_meals != 'N/A'
+GROUP BY 
+    home_meals
+ORDER BY 
+    meal_count DESC;
