@@ -1,0 +1,11 @@
+SELECT 
+    food_tracker,
+    COUNT(*) AS tracker_count
+FROM 
+    fitness_chart
+GROUP BY 
+    food_tracker
+HAVING 
+    food_tracker IS NOT NULL AND food_tracker != 'N/A'
+ORDER BY 
+    tracker_count DESC;
