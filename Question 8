@@ -1,0 +1,11 @@
+SELECT 
+    biggest_challenges,
+    COUNT(*) AS challenge_count
+FROM 
+    fitness_chart
+WHERE 
+    biggest_challenges IS NOT NULL AND biggest_challenges != 'N/A'
+GROUP BY 
+    biggest_challenges
+ORDER BY 
+    challenge_count DESC;
