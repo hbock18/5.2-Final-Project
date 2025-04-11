@@ -1,0 +1,7 @@
+SELECT 
+    workout_type, 
+    COUNT(*) AS workout_count
+FROM 
+    Fitness_Chart
+GROUP BY 
+workout_type
