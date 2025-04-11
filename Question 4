@@ -1,0 +1,11 @@
+SELECT 
+    motivation_activity,
+    COUNT(*) AS motivation_count
+FROM 
+    fitness_data
+WHERE
+    motivation_activity IS NOT NULL AND motivation_activity != 'N/A'
+GROUP BY 
+    motivation_activity
+ORDER BY 
+    motivation_count DESC;
