@@ -1,0 +1,11 @@
+SELECT 
+    diet_type,
+    COUNT(*) AS diet_count
+FROM 
+    fitness_data
+WHERE 
+    diet_type IS NOT NULL AND diet_type != 'N/A'
+GROUP BY 
+    diet_type
+ORDER BY 
+    diet_count DESC;
